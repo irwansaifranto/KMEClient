@@ -1,0 +1,11 @@
+A:\KERJA\KAMORO\KMEClient\KMEClient\bin\Debug\netcoreapp2.0\KMEClient.deps.json
+A:\KERJA\KAMORO\KMEClient\KMEClient\bin\Debug\netcoreapp2.0\KMEClient.runtimeconfig.json
+A:\KERJA\KAMORO\KMEClient\KMEClient\bin\Debug\netcoreapp2.0\KMEClient.runtimeconfig.dev.json
+A:\KERJA\KAMORO\KMEClient\KMEClient\bin\Debug\netcoreapp2.0\KMEClient.dll
+A:\KERJA\KAMORO\KMEClient\KMEClient\bin\Debug\netcoreapp2.0\KMEClient.pdb
+A:\KERJA\KAMORO\KMEClient\KMEClient\obj\Debug\netcoreapp2.0\KMEClient.csprojResolveAssemblyReference.cache
+A:\KERJA\KAMORO\KMEClient\KMEClient\obj\Debug\netcoreapp2.0\KMEClient.csproj.CoreCompileInputs.cache
+A:\KERJA\KAMORO\KMEClient\KMEClient\obj\Debug\netcoreapp2.0\KMEClient.AssemblyInfoInputs.cache
+A:\KERJA\KAMORO\KMEClient\KMEClient\obj\Debug\netcoreapp2.0\KMEClient.AssemblyInfo.cs
+A:\KERJA\KAMORO\KMEClient\KMEClient\obj\Debug\netcoreapp2.0\KMEClient.dll
+A:\KERJA\KAMORO\KMEClient\KMEClient\obj\Debug\netcoreapp2.0\KMEClient.pdb

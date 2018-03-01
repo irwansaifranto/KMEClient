@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="g-pa-20">
+    <div class="row">
+        <div class="col-xl-12">
+            <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">Tables - Basic</h1>
+            <div id="grid"></div>
+        </div>  
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#grid").kendoGrid({
+                dataSource: {
+                    type: "odata",
+                    transport: {
+                        read: "https://demos.telerik.com/kendo-ui/service/Northwind.svc/Customers"
+                    },
+                    pageSize: 20
+                },
+                height: 550,
+                sortable: true,
+                filterable: true,
+                pageable: {
+                    refresh: true,
+                    pageSizes: true,
+                    buttonCount: 5
+                },
+                columns: [{
+                    field: "ContactName",
+                    title: "Contact Name",
+                    width: 240
+                }, {
+                    field: "ContactTitle",
+                    title: "Contact Title"
+                }, {
+                    field: "CompanyName",
+                    title: "Company Name"
+                }, {
+                    field: "Country",
+                    width: 150
+                }]
+            });
+        });
+    </script>
+}
