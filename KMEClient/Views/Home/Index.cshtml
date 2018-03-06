@@ -3,14 +3,49 @@
 }
 
 <div class="g-pa-20">
+    <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">Tables - Basic</h1>
     <div class="row">
-        <div class="col-xl-12">
-            <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">Tables - Basic</h1>
-            <div id="grid"></div>
+        <div class="col-sm-5">
+            <!-- With Button (Colorful BG) -->
+            <div class="form-group g-mb-30">
+                <div class="g-pos-rel">
+                    <button class="btn u-input-btn--v1 g-width-40 g-bg-primary rounded-0" type="submit">
+                        <i class="hs-admin-search g-absolute-centered g-font-size-16 g-color-white"></i>
+                    </button>
+                    <input id="inputGroup-2_5" class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3 rounded-0 g-px-14 g-py-10" type="text" placeholder="Search by name, email or hp">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-7">
+            <div class="btn-add-employee">
+                <button class="btn btn-primary pull-right btn-new-employee">Add New Employee</button>
+            </div>
+        </div>
+    </div>
+    <div id="grid" class="g-mb-40"></div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade g-mb-40" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add New Employee</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" id="mdl-employee-form">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
 
 @section scripts {
+    <script type="text/javascript" src="~/lib/unify/admin-template/assets/js/components/hs.range-datepicker.js"></script>
     <script type="text/javascript" src="~/js/app/employee/grid-employee.js"></script>
+    <script type="text/javascript" src="~/js/app/employee/create-employee.js"></script>
 }

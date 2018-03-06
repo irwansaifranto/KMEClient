@@ -1,0 +1,18 @@
+﻿<div class="row">
+    <!-- 1-st column -->
+    <div class="col-md-6">
+        <!-- Personal Info -->
+        @{ await Html.RenderPartialAsync("~/Views/Employee/Partial/_PersonalInfo.cshtml"); }
+        <!-- Contact Info -->
+        @{ await Html.RenderPartialAsync("~/Views/Employee/Partial/_ContactInfo.cshtml"); }
+    </div>
+    <!-- 2-nd column -->
+    <div class="col-md-6">
+        <!-- Account Number Info -->
+        @{ await Html.RenderPartialAsync("~/Views/Employee/Partial/_AccountNumberInfo.cshtml"); }
+        <!-- Emergency Contact Info -->
+        @{ await Html.RenderPartialAsync("~/Views/Employee/Partial/_EmergencyContactInfo.cshtml"); }
+        <!-- Status Employee Info -->
+        @{ await Html.RenderPartialAsync("~/Views/Employee/Partial/_StatusEmployeeInfo.cshtml"); }
+    </div>
+</div>

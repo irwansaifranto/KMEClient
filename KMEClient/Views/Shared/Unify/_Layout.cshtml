@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta charset="utf-8" />
-
     <!-- Favicon -->
     <link rel="shortcut icon" href="~/favicon.ico">
     <!-- Google Fonts -->
@@ -34,10 +33,13 @@
     <link rel="stylesheet" href="~/lib/unify/admin-template/assets/css/unify-admin.css">
     <!-- CSS Kendo UI -->
     <link rel="stylesheet" href="~/lib/kendo/styles/kendo.common.min.css">
-    <link rel="stylesheet" href="~/lib/kendo/styles/kendo.bootstrap-v4.min.css">
+    <link rel="stylesheet" href="~/lib/kendo/styles/kendo.bootstrap.min.css">
     <link rel="stylesheet" href="~/lib/kendo/styles/kendo.default.mobile.min.css">
+    <!-- CSS Sweetalert2 -->
+    <link rel="stylesheet" href="~/lib/bootstrap-sweetalert-master/dist/sweetalert.css" />
     <!-- CSS Customization -->
     <link rel="stylesheet" href="~/lib/unify/assets/css/custom.css">
+    <link rel="stylesheet" href="~/css/main.css" />
 </head>
 <body>
     <!-- Header -->
@@ -55,13 +57,15 @@
     <main class="container-fluid px-0 g-pt-65">
         <div class="row no-gutters g-pos-rel g-overflow-x-hidden">
             <!-- Sidebar Nav -->
+            @*<div style="float: left !important; position: fixed; width: 100% ">
+            @{ await Html.RenderPartialAsync("~/Views/Shared/Unify/_SidebarNav.cshtml"); }
+        </div>*@
             @{ await Html.RenderPartialAsync("~/Views/Shared/Unify/_SidebarNav.cshtml"); }
             <!-- End Sidebar Nav -->
-
             <div class="col g-ml-45 g-ml-0--lg g-pb-65--md">
                 <!-- Breadcrumb-v1 -->
                 <div class="g-hidden-sm-down g-bg-gray-light-v8 g-pa-20">
-                    <ul class="u-list-inline g-color-gray-dark-v6">
+                    <ul class="u-list-inline g-color-gray-dark-v6 unify-breadcrumb">
                         <li class="list-inline-item g-mr-10">
                             <a class="u-link-v5 g-color-gray-dark-v6 g-color-lightblue-v3--hover g-valign-middle" href="#!">Dashboard</a>
                             <i class="hs-admin-angle-right g-font-size-12 g-color-gray-light-v6 g-valign-middle g-ml-10"></i>
@@ -81,6 +85,31 @@
                 @{ await Html.RenderPartialAsync("~/Views/Shared/Unify/_Footer.cshtml"); }
                 <!-- End Footer -->
             </div>
+            @*<div style="float: left !important; width: 100%; padding-left: 250px;">
+                <div class="col g-ml-45 g-ml-0--lg g-pb-65--md">
+                    <!-- Breadcrumb-v1 -->
+                    <div class="g-hidden-sm-down g-bg-gray-light-v8 g-pa-20">
+                        <ul class="u-list-inline g-color-gray-dark-v6">
+                            <li class="list-inline-item g-mr-10">
+                                <a class="u-link-v5 g-color-gray-dark-v6 g-color-lightblue-v3--hover g-valign-middle" href="#!">Dashboard</a>
+                                <i class="hs-admin-angle-right g-font-size-12 g-color-gray-light-v6 g-valign-middle g-ml-10"></i>
+                            </li>
+                            <li class="list-inline-item g-mr-10">
+                                <a class="u-link-v5 g-color-gray-dark-v6 g-color-lightblue-v3--hover g-valign-middle" href="#!">Tables</a>
+                                <i class="hs-admin-angle-right g-font-size-12 g-color-gray-light-v6 g-valign-middle g-ml-10"></i>
+                            </li>
+                            <li class="list-inline-item">
+                                <span class="g-valign-middle">Tables - Basic</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Breadcrumb-v1 -->
+                    @RenderBody()
+                    <!-- Footer -->
+                    @{ await Html.RenderPartialAsync("~/Views/Shared/Unify/_Footer.cshtml"); }
+                    <!-- End Footer -->
+                </div>
+            </div>*@
         </div>
     </main>
 
@@ -126,6 +155,8 @@
     <script src="~/lib/unify/admin-template/assets/js/components/hs.popup.js"></script>
     <!-- JS Kendo UI -->
     <script src="~/lib/kendo/js/kendo.all.min.js"></script>
+    <!-- JS Sweetalert2 -->
+    <script src="~/lib/bootstrap-sweetalert-master/dist/sweetalert.min.js"></script>
     <!-- JS Custom -->
     <script src="~/lib/unify/assets/js/custom.js"></script>
     <script>

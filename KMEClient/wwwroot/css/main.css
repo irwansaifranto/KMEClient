@@ -1,0 +1,37 @@
+﻿.unify-breadcrumb {
+    margin-top: 15px;
+}
+
+.k-tooltip {
+    background: #e62154 !important;
+}
+
+.mandatory {
+    color: red;
+}
+
+.k-datepicker {
+    width: 100%;
+}
+
+#datepicker-birth-date, #datepicker-join-date {
+    height: 38px;
+}
+
+.input-dtpicker span span span.k-select {
+    line-height: 2.6em;
+}
+
+.modal-body {
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
