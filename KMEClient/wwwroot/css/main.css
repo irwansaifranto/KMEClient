@@ -1,9 +1,23 @@
-﻿.unify-breadcrumb {
-    margin-top: 15px;
+﻿.main-body {
+    margin-top: 60px;
+}
+
+.btn-add-employee {
+    margin-bottom: 20px;
+}
+
+.row-centered {
+    text-align: center;
+}
+
+.col-centered {
+    display: inline-block;
+    float: none;
+    margin-right: -4px;
 }
 
 .k-tooltip {
-    background: #e62154 !important;
+    background: #72c02c !important;
 }
 
 .mandatory {
@@ -27,7 +41,6 @@
     overflow-y: auto;
     overflow-x: hidden;
 }
-
 
 
 

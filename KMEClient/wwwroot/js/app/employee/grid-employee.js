@@ -1,9 +1,10 @@
 ﻿(function () {
     var gridEmployee = (function () {
-        var grid;
+        var grid, apiEndpointForm;
 
         var initalDom = function () {
             grid = $("#grid");
+            apiEndpointForm = "/EMployee/Create";
         };
 
         var initialDataSource = [
@@ -23,8 +24,19 @@
             { Name: "Alfabet Thinking10", Email: "Alfabetthinking10@gmail.com", BirthPlace: "Ciamis", BirthDate: "1995-08-01T00:00:00", Gender: "Female", Phone: "087189657309", Status: "Single", Address: "Jl. Kebonkopi No. 02", JoinDate: "2018-03-21T00:00:00", ActiveStatus: "Active" }
         ];
 
-        var editItem = function () {
-            alert("tes");
+        var editItem = function () {   
+            $.ajax({
+                type: "GET",
+                url: apiEndpointForm,
+                cache: false,
+                success: function (data, status, xhr) {
+                    generateDom.modal("myEditModal", "Irwan Rahmat", data);
+                    $("#myEditModal").modal({ backdrop: 'static', keyboard: false }).show();
+                },
+                error: function (data, status, xhr) {
+                    alert("Something worse happen !!");
+                }
+            });         
         };
 
         var detailItem = function () {
@@ -70,23 +82,12 @@
                     refresh: true,
                     pageSizes: true
                 },
+                dataBound: function (e) {
+                    $('<div class="k-loading-mask" style="width: 100%; height: 100%; top: 0px; left: 0px;"><span class="k-loading-text">Loading...</span><div class="k-loading-image"></div><div class="k-loading-color"></div></div>').appendTo('#YourGridID .k-grid-content');
+                },
                 columns: [
                     {
                         command: [
-                            {
-                                name: "detail",
-                                text: "Detail",
-                                click: detailItem,
-                                imageClass: "fa fa-plus-square",
-                                template: '<a class="k-button-icon #=className# k-grid-custom" #=attr# href="\\#"><span class="#=imageClass# action-grid-employee" title="Detail Employee"></span></a>'
-                            },
-                            {
-                                name: "changeStatus",
-                                text: "Change Status",
-                                click: deleteItem,
-                                imageClass: "fa fa-cog",
-                                template: '<a class="k-button-icon #=className# k-grid-custom" #=attr# href="\\#"><span class="#=imageClass# action-grid-employee" title="Change Status"></span></a>'
-                            },
                             {
                                 name: "edit",
                                 text: "Edit",
@@ -95,7 +96,7 @@
                                 template: '<a class="k-button-icon #=className# k-grid-custom" #=attr# href="\\#"><span class="#=imageClass# action-grid-employee" title="Edit Employee"></span></a>'
                             }
                         ],
-                        width: 80,
+                        width: 40,
                         headerAttributes: { style: "text-align:center" },
                         attributes: { class: "text-center" }
                     },
@@ -110,7 +111,7 @@
                     {
                         field: "JoinDate",
                         title: "Join Date",
-                        template: "#= kendo.toString(JoinDate, 'MMMM dd, yyyy') #",
+                        template: "#= kendo.toString(JoinDate, 'dd MMMM yyyy') #",
                         width: 120,
                         filterable: {
                             extra: false
@@ -135,11 +136,11 @@
                     {
                         field: "ActiveStatus",
                         title: "Status",
-                        template: '# if (ActiveStatus == "Active") { # <div class="d-flex"><span class="u-tags-v1 text-center g-width-130 g-brd-around g-brd-teal-v2 g-bg-teal-v2 g-color-white g-rounded-50 g-py-4 g-px-15">#= ActiveStatus # </span></div> # } else { # <div class="d-flex"><span class="u-tags-v1 text-center g-width-130 g-brd-around g-brd-lightbrown g-bg-lightbrown g-color-white g-rounded-50 g-py-4 g-px-15">#= ActiveStatus # </span></div> # } #',
+                        template: '# if (ActiveStatus == "Active") { # <span>#= ActiveStatus #</span> # } else { # <span>#= ActiveStatus #</span> # } #',
                         width: 100,
                         filterable: {
                             extra: false
-                        }
+                        },
                     }
                 ]
             });

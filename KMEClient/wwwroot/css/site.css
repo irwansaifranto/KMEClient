@@ -1,35 +1,49 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.g-bg-primary {
+    background-color: #72c02c !important;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.btn-primary {
+    background-color: #72c02c !important;
+    border-color: #6fc225;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+.btn-primary:hover {
+    color: #fff;
+    background-color: #72c02c;
+    border-color: #6fc225;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+a {
+    color: #72c02c;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+a:hover {
+    color: #6fc225;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+.u-check input[type="checkbox"]:checked + .u-check-icon-checkbox-v6 i, .u-check input[type="checkbox"]:checked + .u-check-icon-radio-v6 i, .u-check input[type="checkbox"]:checked + * .u-check-icon-checkbox-v6 i, .u-check input[type="checkbox"]:checked + * .u-check-icon-radio-v6 i, .u-check input[type="radio"]:checked + .u-check-icon-checkbox-v6 i, .u-check input[type="radio"]:checked + .u-check-icon-radio-v6 i, .u-check input[type="radio"]:checked + * .u-check-icon-checkbox-v6 i, .u-check input[type="radio"]:checked + * .u-check-icon-radio-v6 i {
+    color: #fff;
+    background-color: #72c02c !important;
+    border-color: #6fc225 !important;
 }
+
+input[type="checkbox"]:checked + .g-bg-primary--checked, input[type="radio"]:checked + .g-bg-primary--checked, input[type="checkbox"]:checked + * .g-bg-primary--checked, input[type="radio"]:checked + * .g-bg-primary--checked {
+    background-color: #72c02c !important;
+}
+
+.u-check input[type="checkbox"]:checked + .u-check-icon-checkbox-v4, .u-check input[type="checkbox"]:checked + .u-check-icon-radio-v4, .u-check input[type="checkbox"]:checked + * .u-check-icon-checkbox-v4, .u-check input[type="checkbox"]:checked + * .u-check-icon-radio-v4, .u-check input[type="radio"]:checked + .u-check-icon-checkbox-v4, .u-check input[type="radio"]:checked + .u-check-icon-radio-v4, .u-check input[type="radio"]:checked + * .u-check-icon-checkbox-v4, .u-check input[type="radio"]:checked + * .u-check-icon-radio-v4 {
+    color: #72c02c;
+    border-color: #72c02c;
+}
+
+.k-link:link, .k-link:visited, .k-nav-current.k-state-hover .k-link {
+    color: #6fc225;
+}
+
+.k-draghandle.k-state-selected:hover, .k-ghost-splitbar-horizontal, .k-ghost-splitbar-vertical, .k-list > .k-state-highlight, .k-list > .k-state-selected, .k-marquee-color, .k-panel > .k-state-selected, .k-scheduler .k-scheduler-toolbar .k-state-selected, .k-scheduler .k-today.k-state-selected, .k-state-selected, .k-state-selected:link, .k-state-selected:visited, .k-tool.k-state-selected {
+    color: #fff;
+    background-color: #72c02c;
+    border-color: #6fc225;
+}
+
+
